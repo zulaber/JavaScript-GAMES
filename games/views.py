@@ -8,3 +8,6 @@ def welcome_site(request):
 
 def south_park_game(request):
     return render(request, 'South_Park.html')
+
+def whack_your_nightmare(request):
+    return render(request, 'whack_your_nightmare.html')

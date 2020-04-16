@@ -1,4 +1,4 @@
-'{% load static %}'
+''
 
 // allows to make "interactions" with cards
 document.addEventListener('DOMContentLoaded', () => {
@@ -6,92 +6,92 @@ document.addEventListener('DOMContentLoaded', () => {
 	const list_of_cards = [
 		{
 			name: 'Butters',
-			img: '{% static "SP/Butters.jpg" %}',
+			img: '/static/SP/Butters.jpg',
 			cheat: 0
 		},
 		{
 			name: 'Butters',
-			img: '{% static "SP/Butters.jpg" %}',
+			img: '/static/SP/Butters.jpg',
 			cheat: 1
 		},
 		{
 			name: 'Cartman',
-			img: '{% static "SP/Cartman.jpg" %}',
+			img: '/static/SP/Cartman.jpg',
 			cheat: 0
 		},
 		{
 			name: 'Cartman',
-			img: '{% static "SP/Cartman.jpg" %}',
+			img: '/static/SP/Cartman.jpg',
 			cheat: 1
 		},
 		{
 			name: 'Kenny',
-			img: '{% static "SP/Kenny.jpg" %}',
+			img: '/static/SP/Kenny.jpg',
 			cheat: 0
 		},
 		{
 			name: 'Kenny',
-			img: '{% static "SP/Kenny.jpg" %}',
+			img: '/static/SP/Kenny.jpg',
 			cheat: 1
 		},
 		{
 			name: 'Randy',
-			img: '{% static "SP/Randy.jpg" %}',
+			img: '/static/SP/Randy.jpg',
 			cheat: 0
 		},
 		{
 			name: 'Randy',
-			img: '{% static "SP/Randy.jpg" %}',
+			img: '/static/SP/Randy.jpg',
 			cheat: 1
 		},
 		{
 			name: 'Stan',
-			img: '{% static "SP/Stan.jpg" %}',
+			img: '/static/SP/Stan.jpg',
 			cheat: 0
 		},
 		{
 			name: 'Stan',
-			img: '{% static "SP/Stan.jpg" %}',
+			img: '/static/SP/Stan.jpg',
 			cheat: 1
 		},
 		{
 			name: 'Kyle',
-			img: '{% static "SP/Kyle.jpg" %}',
+			img: '/static/SP/Kyle.jpg',
 			cheat: 0
 		},
 		{
 			name: 'Kyle',
-			img: '{% static "SP/Kyle.jpg" %}',
+			img: '/static/SP/Kyle.jpg',
 			cheat: 1
 		},
 		{
 			name: 'Hankey',
-			img: '{% static "SP/Hankey.jpg" %}',
+			img: '/static/SP/Hankey.jpg',
 			cheat: 0
 		},
 		{
 			name: 'Hankey',
-			img: '{% static "SP/Hankey.jpg" %}',
+			img: '/static/SP/Hankey.jpg',
 			cheat: 1
 		},
 		{
 			name: 'Wendy',
-			img: '{% static "SP/Wendy.jpg" %}',
+			img: '/static/SP/Wendy.jpg',
 			cheat: 0
 		},
 		{
 			name: 'Wendy',
-			img: '{% static "SP/Wendy.jpg" %}',
+			img: '/static/SP/Wendy.jpg',
 			cheat: 1
 		},
 		{
 			name: 'Satan',
-			img: '{% static "SP/Satan.jpg" %}',
+			img: '/static/SP/Satan.jpg',
 			cheat: 0
 		},
 		{
 			name: 'Satan',
-			img: '{% static "SP/Satan.jpg" %}',
+			img: '/static/SP/Satan.jpg',
 			cheat: 1
 		},
 	]
@@ -116,7 +116,7 @@ function create_battlefield() {
 		// create card-img
 		var card = document.createElement('img')
 		// setting new attribute to blank top of the card
-		card.setAttribute('src', '{% static "SP/top.jpg" %}')
+		card.setAttribute('src', '/static/SP/top.jpg')
 		// adds id to manage cards
 		card.setAttribute('id', i)
 		// adds flip function when card is clicked
@@ -129,12 +129,12 @@ function check_math(){
 	// all cards 
 	let all_cards = document.querySelectorAll('img')
 	if (chosen_cards[0] === chosen_cards[1]) {
-		all_cards[chosen_id[0]].setAttribute('src', '{% static "SP/blank.jpg" %}')
-		all_cards[chosen_id[1]].setAttribute('src', '{% static "SP/blank.jpg" %}')
+		all_cards[chosen_id[0]].setAttribute('src', '/static/SP/blank.jpg')
+		all_cards[chosen_id[1]].setAttribute('src', '/static/SP/blank.jpg')
 		win_cards.add(chosen_id[0])	
 	} else {
-		all_cards[chosen_id[0]].setAttribute('src', '{% static "SP/top.jpg" %}')
-		all_cards[chosen_id[1]].setAttribute('src', '{% static "SP/top.jpg" %}')
+		all_cards[chosen_id[0]].setAttribute('src', '/static/SP/top.jpg')
+		all_cards[chosen_id[1]].setAttribute('src', '/static/SP/top.jpg')
 	}
 	// checks for win
 	if ( win_cards.size === list_of_cards.length / 2){
@@ -190,4 +190,16 @@ function shuffle(array) {
 	return array;
   }
 create_battlefield()
-})
+});
+const box = document.querySelectorAll('box_whack')
+const nightmare = document.querySelectorAll('nightmare')
+const time_left = document.querySelector('#time_left_whack')
+let resoult = document.querySelector('#resoult_whack')
+
+resoult = 0
+console.log(box)
+function random_box(){
+    box.forEach(className => {
+        className.classList.remove("nightmare")
+    })
+};

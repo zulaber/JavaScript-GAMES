@@ -28,6 +28,7 @@ body{
 }
 
 .nightmare{
-    background-image: url("/static/WHACK/reality.jpg");
-    background-size: cover;
+    background-image: url("/static/css/static/SP/Butters.jpg");
+    width: 100px;
+    color: aqua;
 }
