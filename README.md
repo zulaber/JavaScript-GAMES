@@ -14,6 +14,7 @@
 
 ## Screenshots
 ![south_park](./img/south_park.PNG)
+![whack](./img/whack.PNG)
 
 ## Technologies
 * JavaScript - ES8
