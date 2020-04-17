@@ -29,7 +29,7 @@ body{
 }
 
 .nightmare{
-    background-image: url("/static/WHACK/reality.jpg");
+    background-image: url("/static/WHACK/reality.jpg?c2a979aad5d6");
     background-size: cover;
     cursor: pointer;
 }
@@ -44,21 +44,22 @@ body{
     background-size: cover;
     background-size: 200px 200px;
     cursor: pointer; 
-    border: 2px solid darkcyan;
-    border-radius: 20%;
 }
 #rock{
-    background-image: url("/static/RPS/rock.jpg");
+    background-image: url("/static/RPS/rock.jpg?ccb9be5ba8c8");
 }
 #paper{
-    background-image: url("/static/RPS/paper.jpg");
+    background-image: url("/static/RPS/paper.jpg?b80a326db3de");
 }
 #scisors{
-    background-image: url("/static/RPS/scisors.jpg");
+    background-image: url("/static/RPS/scisors.jpg?3221e975642a");
 }
 .choice_vs{
     width: 200px;
     height: 200px;
     background-size: cover;
     background-size: 200px 200px;
+}
+#result_rps{
+    background-color: red;
 }

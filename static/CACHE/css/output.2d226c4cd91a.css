@@ -12,7 +12,6 @@ body{
     flex-wrap: wrap;
     height: 300px;
     width: 600px;
-    cursor: pointer;
 }
 /* Whack your nightmare */
 .box_whack{
@@ -29,36 +28,26 @@ body{
 }
 
 .nightmare{
-    background-image: url("/static/WHACK/reality.jpg");
+    background-image: url("/static/WHACK/reality.jpg?c2a979aad5d6");
     background-size: cover;
-    cursor: pointer;
 }
 /* Rock Paper Scisors */
 .choices_rps {
     display: flex;
-    justify-content:space-between ; 
+    justify-content:center ; 
   }
 .choice_rps{
     width: 200px;
     height: 200px;
     background-size: cover;
-    background-size: 200px 200px;
-    cursor: pointer; 
-    border: 2px solid darkcyan;
-    border-radius: 20%;
+    background-size: 200px 200px; 
 }
 #rock{
-    background-image: url("/static/RPS/rock.jpg");
+    background-image: url("/static/RPS/rock.jpg?ccb9be5ba8c8");
 }
 #paper{
-    background-image: url("/static/RPS/paper.jpg");
+    background-image: url("/static/RPS/paper.jpg?b80a326db3de");
 }
 #scisors{
-    background-image: url("/static/RPS/scisors.jpg");
-}
-.choice_vs{
-    width: 200px;
-    height: 200px;
-    background-size: cover;
-    background-size: 200px 200px;
+    background-image: url("/static/RPS/scisors.jpg?3221e975642a");
 }

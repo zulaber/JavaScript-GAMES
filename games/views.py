@@ -11,3 +11,6 @@ def south_park_game(request):
 
 def whack_your_nightmare(request):
     return render(request, 'whack_your_nightmare.html')
+    
+def rock_paper_scissors(request):
+    return render(request, 'rock_paper_scissors.html') 
