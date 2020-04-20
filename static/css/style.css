@@ -62,3 +62,24 @@ body{
     background-size: cover;
     background-size: 200px 200px;
 }
+/* Connect_4 */
+.grid_4{
+    display: flex;
+    justify-content:space-between ; 
+    flex-wrap: wrap;
+    width: 550px;
+    margin: auto;
+}
+.grid_4 div{
+    height: 70px;
+    width: 70px;
+    border: 1px solid lightseagreen;
+    border-radius: 50%;
+    margin: 3px;
+}
+.player_one_4{
+    background-color: red;
+}
+.player_two_4{
+    background-color: blue;
+}

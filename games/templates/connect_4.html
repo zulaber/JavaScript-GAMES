@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block add_js %}}
+    <script src='{% static "js/connect_4.js" %}' type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+    <h4 class="text-center" style="background-color: #F0F8FF;">
+        Turn Player: <b><span id='turn_4'>1</span></b>
+    </h4>
+    <div class="grid_4">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="full" style="border: none;"></div>
+        <div class="full" style="border: none;"></div>
+        <div class="full" style="border: none;"></div>
+        <div class="full" style="border: none;"></div>
+        <div class="full" style="border: none;"></div>
+        <div class="full" style="border: none;"></div>
+        <div class="full" style="border: none;"></div>
+    </div>
+    <div style="text-align:center">
+        <button type="button" class="btn btn-info" id="rules_4">Rules of Game</button>
+    </div>
+{% endblock %}
