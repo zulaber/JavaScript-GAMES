@@ -1,6 +1,7 @@
 # JavaScript-GAMES(https://java-script-games.herokuapp.com/)
 > Games made with JavaScript. Each game will be more advanced than the previous one.
 
+
 ## Table of contents
 * [General info](#general-info)
 * [Screenshots](#screenshots)
