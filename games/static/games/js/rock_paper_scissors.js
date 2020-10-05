@@ -9,22 +9,17 @@ const computer_score = document.querySelector('#computer_score')
 let player_res = 0
 let computer_res = 0
 
-// adds events to options
 choice.forEach(decision => {
     decision.addEventListener('click', player_choice)
-    // adds options for pc
     computer_options.push(decision.id)
 })
 
 function player_choice() {
     const player_choice = this.id
-    // computer choice
     const computer_choice = computer_options[Math.floor(Math.random() * computer_options.length)]
-    // adds bg-images
     player_img.style.backgroundImage = `url(\'{% static "RPS/${player_choice}.jpg" %}\')`
     computer_img.style.backgroundImage = `url(\'{% static "RPS/${computer_choice}.jpg" %}\')`
 
-    // logic of vs
     if (player_choice === computer_choice){
         vs.textContent = 'REMIS'
     } else if ((player_choice === "rock" && computer_choice === "scisors") || 

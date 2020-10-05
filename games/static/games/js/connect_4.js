@@ -1,34 +1,20 @@
-// DOMContentLoaded - allows to include js file after DOM is fully loaded
-// addEventListener - allows to add events
 document.addEventListener('DOMContentLoaded', () => {
-    // catch all of the grids in grid_4 class
     const circles = document.querySelectorAll('.grid_4 div')
-    // catch turn 
     const turn = document.querySelector('#turn_4')
-    // adds inf about rules
     const rules = document.querySelector('#rules_4')
     let current_player = 1
-    rules.onclick = () => alert('The aim for both players is to make a straight line of four own pieces; the line can be vertical, horizontal or diagonal.')
-    // adds click function to all divs in catch_4 (except bottom "full" ones)
+    rules.onclick = () => alert('The aim for both players is to make a straight line of four own pieces. The line can be vertical, horizontal or diagonal.')
     for (let i = 0; i < circles.length -7 ; i += 1)
             (function(index) {
-                // shorter function then addEventListener np.: circles[i].onclick = () => alert('fdf')
-                // adds onclick event on each circle
                 circles[i].onclick = function () {
-                    // allows to add on top of circle if its already taken
-                    // + 7 coz of number of rows like 0..... next line 8....
-                    // .classList - shows all the classes of element .contains function True False
                     if (circles[index +7].classList.contains('full') &&
                         // block overwrite tokens
                         circles[index].classList.contains('full') != true) {
                         // checks turn of player
                         if (current_player === 1) {
-                            //adds full class and player class
                             circles[index].classList.add('full')
                             circles[index].classList.add('player_one_4')
-                            //change Player
                             current_player = 2
-                            // display player on website
                             turn.innerHTML = current_player
                         } else if (current_player === 2) {
                             circles[index].classList.add('full')
@@ -41,9 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         alert('Can\'t do this')
                 }
             })(i)
-// win conditions
 function win_condition() {
-    //make const that shows all winning arrays
     const winningArrays = [
         [0, 1, 2, 3], [41, 40, 39, 38], [7, 8, 9, 10], [34, 33, 32, 31], [14, 15, 16, 17], [27, 26, 25, 24], [21, 22, 23, 24],
         [20, 19, 18, 17], [28, 29, 30, 31], [13, 12, 11, 10], [35, 36, 37, 38], [6, 5, 4, 3], [0, 7, 14, 21], [41, 34, 27, 20],
@@ -55,22 +39,18 @@ function win_condition() {
         [12, 18, 24, 30], [1, 2, 3, 4], [5, 4, 3, 2], [8, 9, 10, 11], [12, 11, 10, 9], [15, 16, 17, 18], [19, 18, 17, 16],
         [22, 23, 24, 25], [26, 25, 24, 23], [29, 30, 31, 32], [33, 32, 31, 30], [36, 37, 38, 39], [40, 39, 38, 37], [7, 14, 21, 28],
         [8, 15, 22, 29], [9, 16, 23, 30], [10, 17, 24, 31], [11, 18, 25, 32], [12, 19, 26, 33], [13, 20, 27, 34]
-        ]   
-    // takes list with 4 values and checks if they same as player
+        ]
     for (let i = 0; i < winningArrays.length; i += 1) {
-        // checks for winning circles if they match
         const win_circle_1 = circles[winningArrays[i][0]]
         const win_circle_2 = circles[winningArrays[i][1]]
         const win_circle_3 = circles[winningArrays[i][2]]
         const win_circle_4 = circles[winningArrays[i][3]]
-        // checks if they math player_one
         if ((win_circle_1.classList.contains('player_one_4')) &&
         (win_circle_2.classList.contains('player_one_4')) &&
         (win_circle_3.classList.contains('player_one_4')) &&
         (win_circle_4.classList.contains('player_one_4'))) {
             alert('Player 1 WINS')
         }
-        // for player 2
         else if (win_circle_1.classList.contains('player_two_4') &&
         win_circle_2.classList.contains('player_two_4') &&
         win_circle_3.classList.contains('player_two_4') &&
