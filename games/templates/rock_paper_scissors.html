@@ -2,33 +2,37 @@
 {% load static %}
 
 {% block add_js %}}
-    <script src='{% static "js/rock_paper_scissors.js" %}' type="text/javascript"></script>
+<script src='{% static "js/rock_paper_scissors.js" %}' type="text/javascript"></script>
 {% endblock %}
 
 {% block content %}
-    <h4 class="text-center" style="background-color: #F0F8FF;">
-        Your Score: <span id='player_score'>0</span>
-        <br>      
-        Computer Score: <span id='computer_score'>0</span>
-    </h4>
-    <h2 class="text-primary text-center">Choose rock, paper or scisors</h2>
-    <div class="choices_rps">        
-        <div class="choice_rps" id="paper"></div>
-        <div class="choice_rps" id="rock"></div>
-        <div class="choice_rps" id="scisors"></div>
-    </div>
+<h4 class="text-center" style="background-color: #F0F8FF;">
+    Your Score: <span id='player_score'>0</span>
+    <br>
+    Computer Score: <span id='computer_score'>0</span>
+</h4>
+<h2 class="text-primary text-center">Choose rock, paper or scisors</h2>
+<div class="choices_rps">
+    <div class="choice_rps" id="paper"></div>
+    <div class="choice_rps" id="rock"></div>
+    <div class="choice_rps" id="scisors"></div>
+</div>
 
-    <div class="choices_rps mt-4">       
-        <div>
-            Your choice:<div id="player_img_rps" class="choice_vs"></div>
-        </div>
-        <div style="background-color: lightcyan; height: 100px; width: 150px; text-align: center;">
-            <h3>Result VS</h3>    
-            <h2><b><div id="vs_rps" class="text-succes"></div></b></h2>
-       </div>
-        <div>
-            Computer choice:<div id="computer_img_rps" class="choice_vs"></div>
-        </div>   
+<div class="choices_rps mt-4">
+    <div>
+        Your choice:
+        <div id="player_img_rps" class="choice_vs"></div>
     </div>
+    <div style="background-color: lightcyan; height: 100px; width: 150px; text-align: center;">
+        <h3>Result VS</h3>
+        <h2><b>
+            <div id="vs_rps" class="text-succes"></div>
+        </b></h2>
+    </div>
+    <div>
+        Computer choice:
+        <div id="computer_img_rps" class="choice_vs"></div>
+    </div>
+</div>
 
 {% endblock %}

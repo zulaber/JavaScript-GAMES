@@ -1,6 +1,6 @@
-from django.contrib import admin
-from django.urls import path, include
-from. views import welcome_site, south_park_game, whack_your_nightmare, rock_paper_scissors, connect_4, snake
+from django.urls import path
+
+from .views import welcome_site, south_park_game, whack_your_nightmare, rock_paper_scissors, connect_4, snake
 
 urlpatterns = [
     path('', welcome_site, name='welcome'),
